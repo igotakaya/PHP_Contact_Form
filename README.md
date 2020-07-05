@@ -43,25 +43,25 @@ PHPの仕様変更により、ヒアドキュメント（EOT）のエラーが�
 `Parse error: syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /url-foo.jp/confirm.php on line 21`
 
 悪い例)
-<?php  
+```<?php  
 $str = <<<EOT　
 Example of string  
 spanning multiple lines  
 using heredoc syntax.  
  EOT; 　$foo = 1;  
  /* EODの前に空白があるし、EOT;以外の文字が入っている*/  
-
+```
 
 
 良い例)  
-<?php  
+```<?php  
 $str = <<<EOT  
 Example of string  
 spanning multiple lines  
 using heredoc syntax.  
 EOT;  
 /* EODの前に空白がないし、EOT；以外の文字がない。*/  
-
+```
 
 
 ## 実際にメールを受け取る場合は
